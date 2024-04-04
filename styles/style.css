@@ -2,4 +2,73 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--font-family), sans-serif;
+}
+
+header {
+  display: grid;
+  position: relative;
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.header__theme-menu-list {
+  color: var(--accent-color);
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: var(--accent-padding);
+  font-size: 18px;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px var(--accent-color) solid;
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px var(--accent-color) solid;
+  outline: none;
+}
+
+.rec-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+  font-size: 18px;
+  color: var(--accent-color);
+  height: 26px;
+  position: absolute;
+  text-align: center;
+  inset: 0 0 0 1360px;
+  padding-block-start: var(--accent-padding);
+  padding-inline-end: 29px;
+  text-transform: uppercase;
+}
+
+.rec-element::after {
+  content: url(../images/recellipse.svg);
+}
+
+.header-title {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 83%;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header-text {
+}
+
+.title-decor {
+  background-color: var(--accent-color);
 }
