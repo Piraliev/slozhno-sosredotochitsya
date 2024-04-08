@@ -13,13 +13,6 @@
   background-attachment: fixed;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  padding: 0 var(--accent-padding);
-  background-color: #000028;
-}
-
 .header {
   display: grid;
   grid-auto-flow: row;
@@ -62,6 +55,12 @@
     justify-content: flex-end;
     margin-block-start: 192px;
   }
+
+  @media (max-width: 375px) {
+    grid-auto-flow: row;
+    justify-content: flex-end;
+    margin-block-start: 75px;
+  }
 }
 
 .header__theme-menu-button:hover {
@@ -73,7 +72,7 @@
   outline: none;
 }
 
-.rec-container {
+.rec-container-upper {
   display: flex;
   gap: 10px;
   position: absolute;
@@ -85,6 +84,16 @@
   align-items: center;
 }
 
+.rec-container-lower {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  inset-inline-start: 20px;
+  inset-block-end: 20px;
+  border-inline-start: 1px var(--accent-color) solid;
+  border-block-end: 1px var(--accent-color) solid;
+}
+  
 .rec-text {
   font-size: 18px;
   color: var(--accent-color);
@@ -134,18 +143,62 @@
 }
 
 .main {
-  color: white;
+  margin-block-start: 60px;
+  padding: 0 var(--accent-padding);
+  background-color: #000028;
+}
+
+.main-section__text-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .main-section-one {
-  color: #000028;
-  margin-block-start: 60px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  justify-content: space-between;
+  margin-block-end: 60px;
 }
 
-.main-section-one__title {
+.main-section__title {
+  font-size: 18px;
+  font-weight: bold;
   color: var(--accent-color);
 }
 
-.main-section-one__text {
+.main-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-section__list-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  color: #000028;
+  margin-block-end: 10px;
+}
+
+.main-section-two__title {
+  margin-block-end: var(--accent-padding);
+}
+
+.main-section__text {
   color: var(--light-theme-color);
+  font-weight: normal;
+  line-height: 130%;
+  font-size: 18px;
+}
+
+.main-section-two__title {
+  width: 30%;
+  margin-block-start: 60px;
+}
+
+.main-section-two__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
