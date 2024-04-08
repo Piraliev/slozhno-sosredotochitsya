@@ -226,7 +226,11 @@
 
 .images-block {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 260px 595px;
+  gap: 20px;
   margin-block-start: 10px;
+}
+
+.images-block__image {
 }
