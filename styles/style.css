@@ -222,3 +222,10 @@
 .title-decor__no-bold-font {
   font-weight: normal;
 }
+
+.images-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-block-start: 10px;
+}
