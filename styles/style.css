@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-image: url(../images/cover-image-dark.png);
+  background-color: #000028;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -18,6 +18,9 @@
   grid-auto-flow: row;
   padding-block-start: var(--accent-padding);
   position: relative;
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .header__theme-menu {
@@ -145,7 +148,6 @@
 .main {
   margin-block-start: 60px;
   padding: 0 var(--accent-padding);
-  background-color: #000028;
 }
 
 .main-section__text-link {
@@ -226,25 +228,70 @@
 
 .images-block {
   display: grid;
-  grid-template-columns: repeat(3, 315px);
-    grid-template-rows: 260px 315px auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 260px 315px 428px;
+  justify-content: center;
   gap: 20px;
-  margin-block-start: 10px;
+  margin-block-start: 20px;
 }
 
 .image {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
+
 .images-block__image1 {
   grid-column-end: span 2;
 }
 
 .images-block__image2 {
-  background-image: url(../images/ice-cream.png);
-    background-size: cover;
-    background-position: center;
-    grid-column-start: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.images-block__image3 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.images-block__image5 {
+  grid-column-end: span 2;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-block-start: 60px;
+}
+
+.footer-title {
+  margin: 319px 277px;
+  font-size: clamp(7.25rem, 17.5rem + -16.0156vw, 9.8125rem);
+  line-height: 83%;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.rec-container-footer-upper {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  inset-inline-end: 20px;
+  inset-block-start: 20px;
+  border-inline-end: 1px var(--accent-color) solid;
+  border-block-start: 1px var(--accent-color) solid;
+}
+
+.rec-container-footer-lower {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  inset-inline-start: 20px;
+  inset-block-end: 20px;
+  border-inline-start: 1px var(--accent-color) solid;
+  border-block-end: 1px var(--accent-color) solid;
 }
