@@ -3,10 +3,11 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme_dark {
+:root .theme_dark {
   --accent-color: #ff0070;
   --title-color: #db00ff;
   --text-color: #f1b2ce;
+  --background-color: #000028;
   --main-font: "IBM Plex mono";
   --accent-padding: 20px;
   --mobile-padding: 10px;
@@ -19,8 +20,15 @@
   */
 }
 
-.header {
-  background-image: url(../images/cover-image-dark.png);
-  background-size: cover;
-  background-position: center;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ff0070;
+    --title-color: #db00ff;
+    --text-color: #f1b2ce;
+    --background-color: #000028;
+    --main-font: "IBM Plex mono";
+    --accent-padding: 20px;
+    --mobile-padding: 10px;
+    /* Дублируем переменные светлой темы */
+  }
 }

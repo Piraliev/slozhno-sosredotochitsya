@@ -6,8 +6,9 @@
   font-weight: normal;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
-  background-color: #000028;
+  background-color: var(--background-color);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -21,6 +22,10 @@
   background-image: url(../images/cover-image-dark.png);
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 375px) {
+    min-width: 100%;
+  }
 }
 
 .header__theme-menu {
@@ -48,6 +53,19 @@
   pointer-events: none;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px var(--accent-color) solid;
+}
+
+.header__theme-menu-button:disabled {
+  outline: 1px var(--accent-color) solid;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px var(--accent-color) solid;
+  outline: none;
+}
+
 .header__theme-menu-list {
   color: var(--accent-color);
   display: grid;
@@ -61,22 +79,15 @@
     grid-auto-flow: row;
     justify-content: flex-end;
     margin-block-start: 192px;
+    padding-inline-end: 20px;
   }
 
   @media (max-width: 375px) {
     grid-auto-flow: row;
     justify-content: flex-end;
     margin-block-start: 75px;
+    padding-inline-end: 10px;
   }
-}
-
-.header__theme-menu-button:hover {
-  outline: 1px var(--accent-color) solid;
-}
-
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px var(--accent-color) solid;
-  outline: none;
 }
 
 .rec-container-upper {
@@ -87,6 +98,11 @@
   inset-inline-end: 29px;
   text-transform: uppercase;
   align-items: center;
+
+  @media (max-width: 375px) {
+    inset-block-start: 10px;
+    inset-inline-end: 19px;
+  }
 }
 
 .rec-container-lower {
@@ -112,7 +128,7 @@
   width: 9px;
   height: 9px;
   background-color: var(--accent-color);
-  box-shadow: 0 0 4px 2px #ff0070;
+  box-shadow: 0 0 4px 2px var(--accent-color);
   border-radius: 50%;
 }
 
@@ -129,10 +145,14 @@
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   margin-block-end: 114px;
+
+  @media (max-width: 375px) {
+    display: block;
+    justify-self: center;
+  }
 }
 
 .header-text {
-  display: flex;
   justify-self: flex-end;
   margin-inline-end: 20px;
   margin-block-end: 134px;
@@ -141,6 +161,12 @@
   line-height: 130%;
   font-weight: bold;
   width: calc(50% - 20px);
+
+  @media (max-width: 375px) {
+    display: block;
+    justify-self: center;
+    margin-inline-start: 10px;
+  }
 }
 
 .title-decor {
@@ -150,11 +176,23 @@
 .main {
   margin-block-start: 60px;
   padding: 0 var(--accent-padding);
+
+  @media (max-width: 375px) {
+    padding: 0 10px;
+  }
 }
 
 .main-section__text-link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.main-section__text-link:hover {
+  border-block-end: 1px var(--text-color) solid;
+}
+
+.main-section__text-link:focus-visible {
+  outline: 1px var(--text-color) solid;
 }
 
 .main-section-one {
@@ -163,6 +201,10 @@
   gap: 20px;
   justify-content: space-between;
   margin-block-end: 60px;
+
+  @media (max-width: 768px) {
+    margin-block-end: 80px;
+  }
 }
 
 .main-section__title {
@@ -187,10 +229,10 @@
 
 .main-section-two {
   margin-block-end: 60px;
-}
 
-.main-section-two__title {
-  margin-block-end: var(--accent-padding);
+  @media (max-width: 768px) {
+    margin-block-end: 80px;
+  }
 }
 
 .main-section__text {
@@ -203,12 +245,22 @@
 .main-section-two__title {
   width: 30%;
   margin-block-start: 60px;
+  margin-block-end: 20px;
+
+  @media (max-width: 768px) {
+    margin-block-start: 80px;
+  }
 }
 
 .main-section-two__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .main-section-three {
@@ -217,6 +269,10 @@
   gap: 20px;
   justify-content: space-between;
   margin-block-end: 60px;
+
+  @media (max-width: 768px) {
+    margin-block-end: 80px;
+  }
 }
 
 .main-section-three__list-title {
@@ -276,6 +332,10 @@
   line-height: 83%;
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
+
+  @media (max-width: 768px) {
+    margin: 463px 204px;
+  }
 }
 
 .rec-container-footer-upper {

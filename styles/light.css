@@ -3,10 +3,11 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme_light {
-  --accent-color: #ff8dcb;
+:root .theme_light {
+  --accent-color: #353430;
   --title-color: #ffc2e6;
   --text-color: #353430;
+  --background-color: #fff1f7;
   --main-font: "IBM Plex mono";
   --accent-padding: 20px;
   --mobile-padding: 10px;
@@ -17,5 +18,43 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  background-color: #fff1f7;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #353430;
+    --title-color: #ffc2e6;
+    --text-color: #353430;
+    --background-color: #fff1f7;
+    /* Дублируем переменные светлой темы */
+  }
+}
+
+.theme_light .header {
+  background-image: url(../images/cover-image-light.png);
+}
+
+.theme_light .title-decor {
+  background-color: #ff8dcb;
+}
+
+.theme_light .header-title {
+  text-shadow: 4px 4px 0 #ff0070;
+}
+
+.theme_light .footer-title {
+  text-shadow: 2px 2px 0 #ff0070;
+}
+
+.theme_light .rec-text {
+  color: var(--background-color);
+}
+
+.theme_light .rec-ellipse {
+  background-color: var(--background-color);
+  box-shadow: 0 0 4px 2px var(--background-color);
+}
+
+.theme_light .main-section__text-link {
+  text-shadow: 2px 2px 0 #ff8dcb;
 }
