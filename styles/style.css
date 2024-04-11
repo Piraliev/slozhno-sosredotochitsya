@@ -44,6 +44,10 @@
   padding-block-end: 5px;
 }
 
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
 .header__theme-menu-list {
   color: var(--accent-color);
   display: grid;
@@ -70,7 +74,7 @@
   outline: 1px var(--accent-color) solid;
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px var(--accent-color) solid;
   outline: none;
 }
@@ -82,8 +86,6 @@
   inset-block-start: 20px;
   inset-inline-end: 29px;
   text-transform: uppercase;
-  width: fit-content;
-  height: fit-content;
   align-items: center;
 }
 
@@ -192,7 +194,7 @@
 }
 
 .main-section__text {
-  color: var(--light-theme-color);
+  color: var(--text-color);
   font-weight: normal;
   line-height: 130%;
   font-size: 18px;

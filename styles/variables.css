@@ -5,8 +5,13 @@
 :root {
   --accent-color: #ff0070;
   --title-color: #db00ff;
-  --light-theme-color: #f1b2ce;
+  --text-color: #f1b2ce;
   --main-font: "IBM Plex mono";
   --accent-padding: 20px;
   --mobile-padding: 10px;
+}
+
+@media (prefers-color-scheme: light) {
+  .theme_auto {
+  }
 }
