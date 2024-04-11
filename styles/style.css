@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  max-width: 100%;
   background-color: var(--background-color);
   background-position: center;
   background-size: cover;
@@ -22,10 +22,6 @@
   background-image: url(../images/cover-image-dark.png);
   background-size: cover;
   background-position: center;
-
-  @media (max-width: 375px) {
-    min-width: 100%;
-  }
 }
 
 .header__theme-menu {
@@ -153,17 +149,17 @@
 }
 
 .header-text {
-  justify-self: flex-end;
+  display: block;
+  justify-self: end;
   margin-inline-end: 20px;
   margin-block-end: 134px;
   font-size: 18px;
   color: #000028;
   line-height: 130%;
   font-weight: bold;
-  width: calc(50% - 20px);
+  width: 50%;
 
   @media (max-width: 375px) {
-    display: block;
     justify-self: center;
     margin-inline-start: 10px;
   }
