@@ -8,7 +8,7 @@
   --title-color: #db00ff;
   --text-color: #f1b2ce;
   --background-color: #000028;
-  --main-font: "IBM Plex mono";
+  --main-font: "IBM Plex mono", sans-serif;
   --accent-padding: 20px;
   --mobile-padding: 10px;
 }
@@ -26,7 +26,7 @@
     --title-color: #db00ff;
     --text-color: #f1b2ce;
     --background-color: #000028;
-    --main-font: "IBM Plex mono";
+    --main-font: "IBM Plex mono", sans-serif;
     --accent-padding: 20px;
     --mobile-padding: 10px;
     /* Дублируем переменные светлой темы */
