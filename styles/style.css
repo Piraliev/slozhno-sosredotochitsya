@@ -218,6 +218,7 @@
   grid-template-columns: 1fr 2fr;
   justify-content: space-between;
   margin-block-end: 60px;
+  gap: 20px;
 
   @media (max-width: 768px) {
     margin-block-end: 80px;
@@ -228,10 +229,6 @@
     flex-direction: column;
     margin-block-end: 50px;
   }
-}
-
-.main-section-title__block {
-  margin-inline-end: 20px;
 }
 
 .main-section__title {
