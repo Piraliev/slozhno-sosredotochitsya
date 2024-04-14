@@ -403,14 +403,15 @@
 }
 
 .footer-title {
-  margin: 319px 277px;
+  display: block;
+    margin: 297px 277px 299px;
   color: var(--title-color);
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   line-height: 83%;
   text-shadow: 2px 2px 0 var(--accent-color);
 
   @media (max-width: 768px) {
-    margin: 463px 204px;
+    margin: 441px 204px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
